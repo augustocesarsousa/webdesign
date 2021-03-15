@@ -1,0 +1,80 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ccc;
+    margin: 0;
+}
+
+.hero{
+    background-image: url(../images/bg-1.jpg);
+    height: 500px;
+    background-position: right center;
+    background-size: cover;
+    border-top: 1px solid transparent;
+}
+
+.hero-content{
+    text-align: center;
+    color: white;
+    margin-top: 150px;
+}
+
+.hero-content h1{
+    text-transform: uppercase;
+    font-size: 46px;
+    text-shadow: 3px 3px 3px black;
+}
+
+.hero nav ul{
+    text-align: right;
+    margin: 20px 50px 0 0;
+}
+
+.hero nav li{
+    display: inline-block;
+    list-style: none;
+    border: 1px solid white;
+}
+
+.hero nav a{
+    background-color: rgba(0, 0, 0, .3);
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.hero nav a:hover{
+    background-color: rgba(0, 0, 0, .5);
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+
+.content-section{
+    background-color: white;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.content-header{
+    background-color: #ddd;
+    border-bottom: solid 2px #999;
+    padding: 10px;
+}
+
+.content-header h2{
+    margin: 0;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 3px black;
+    padding: 5px;
+    background-color: rgb(98, 102, 88);
+    margin-top: 15px;
+}
