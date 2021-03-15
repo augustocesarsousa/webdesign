@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Float</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing float">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            #container{
+                width: 80%;
+                padding: 15px;
+                background-color: #ccc;
+                overflow: auto;
+            }
+
+            #container div{
+                width: 150px;
+                height: 50px;
+                border: 2px solid red;
+                margin: 5px;
+            }
+
+            #div2{
+                float: none;
+            }
+
+            #div3{
+                background-color: yellow;
+                float: right;
+            }
+
+            header{
+                background-color: #ccc;
+                height: 50px;
+            }
+
+            nav{
+                width: 25%;
+                height: 50px;
+                background-color: orange;
+                float: left;
+            }
+
+            main{
+                width: 70%;
+                height: 100px;
+                background-color: yellow;
+                float: left;
+            }
+
+            footer{
+                height: 50px;
+                background-color: blue;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Testing float</h1>
+
+        <div id="container">
+            <div id="div1">div1</div>
+            <div id="div2">div2</div>
+            <div id="div3">div3</div>           
+        </div>
+
+        <hr>
+
+        <header>header</header>
+        <nav>nav</nav>
+        <main>main</main>
+        <footer>footer</footer>
+    </body>
+</html>
