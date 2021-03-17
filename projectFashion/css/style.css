@@ -1,0 +1,86 @@
+body{
+    font-family: tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.div-main{
+    width: 1024px;
+    margin: 20px auto;
+}
+
+.header-main{
+    background-color: #252b4d;
+    height: 50px;
+    position: relative;
+}
+
+.header-logo{
+    margin: 7px 0 0 200px;
+}
+
+.header-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.header-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    display: inline-block;
+    margin: 0 15px 0 0; 
+    padding: 15px;   
+}
+
+.header-nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: silver;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+.portfolio{
+    text-align: center;
+    padding: 50px 100px;
+}
+
+.portfolio h1{
+    font-size: 36px;
+    color: #555;
+}
+
+.portfolio p{
+    font-size: 16px;
+    line-height: 2;
+    color: #777;
+}
+
+.gallery{
+    overflow: auto;
+    padding: 0px 100px 50px 100px;
+}
+
+.gallery-card{
+    width: 32%;
+    float: left;
+    text-align: center;
+}
+
+.gallery-title{
+    font-size: 16px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.gallery-text{
+    font-size: 16px;
+    color: #777;
+}
