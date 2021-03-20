@@ -10,7 +10,7 @@ body{
 }
 
 .header-main{
-    background-color: #252b4d;
+    background-color: #1a2b35;
     height: 50px;
     position: relative;
 }
@@ -31,18 +31,25 @@ body{
     padding: 0;
 }
 
+
 .header-nav li{
     display: inline-block;
     margin: 0 15px 0 0; 
-    padding: 15px;   
+    padding: 15px;
 }
 
 .header-nav a{
     text-decoration: none;
     text-transform: uppercase;
-    color: silver;
+    color: rgb(126, 126, 126);
     letter-spacing: 5px;
     font-size: 12px;
+    font-weight: bold;
+    transition: color .3s linear;
+}
+
+.header-nav a:hover{
+    color: #fff;
 }
 
 .portfolio{
@@ -83,4 +90,52 @@ body{
 .gallery-text{
     font-size: 16px;
     color: #777;
+}
+
+.about{
+    background-color: #003d52;
+    height: 350px;
+    padding: 100px;
+    color: white;
+    background-image: url(../imagens/bg_detalhe.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+
+.about h2{
+    font-family: Helvetica, sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: normal;
+}
+
+.about p{
+    width: 420px;
+    margin: 30px 0 0 0;
+    line-height: 1.5;
+}
+
+.contact p{
+    color: #003d52;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-style: normal;
+    margin: 30px 0;
+}
+
+footer{
+    background-color: #1a2b35;
+    height: 50px;
+    margin: 30px 0;
+}
+
+footer p{
+    color: rgb(113, 192, 188);
+    font-size: 12px;
+    text-align: center;
+    padding: 18px;
+    letter-spacing: 3px;
 }
