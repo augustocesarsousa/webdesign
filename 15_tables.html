@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Tables</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="Testing tables">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            caption{
+                padding: 10px;
+            }
+
+            table{
+                border-collapse: collapse;
+                width: 500px;
+                margin: auto;
+                text-align: center;
+            }
+
+            th{
+                border: 1px solid black;
+                padding: 10px;
+                background-color: rgb(0, 255, 170);
+            }
+
+            td{
+                border: 1px solid black;
+                padding: 10px;
+                background-color: rgb(168, 205, 206);
+            }
+
+            tfoot td{
+                font-size: 12px;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>Courses prices</caption>
+            <thead>
+                <tr>
+                    <th>Area</th>
+                    <th>Course</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="3">*prices of promo</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Digner</td>
+                    <td>Photoshop</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>                    
+                    <td>InDesig</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>                    
+                    <td>Ilustrator</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>
+                    <td rowspan="4">Development</td>
+                    <td>HTML</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>
+                    <td>CSS</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>
+                    <td>Javascript</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>$ 1000.00</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
