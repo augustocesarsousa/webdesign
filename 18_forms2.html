@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Forms</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing forms">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            form{
+                width: 400px;
+                border: 1px solid black;
+                padding: 5px;
+            }
+
+            label, input, textarea{
+                display: block;
+            }
+
+            label{
+                padding: 5px;
+            }
+
+            .lbRadio, .radio, .lbCheckbox, .checkbox{
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST">
+            <label for="text">Text: </label>
+            <input type="text" name="text" id="text" required>
+
+            <label for="text2">Text with placerolder: </label>
+            <input type="text" name="text2" id="text2" placeholder="writ your text here">
+
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email">
+
+            <label for="number">Number: </label>
+            <input type="number" name="number" id="number">
+
+            <label for="date" min="1900-01-01">Date: </label>
+            <input type="date" name="date" id="date">
+
+            <label for="time">Time: </label>
+            <input type="time" name="time" id="time">
+
+            <label for="range">Range: </label>
+            <input type="range" name="range" id="range" min="0" max="10" step="2">
+
+            <label for="color">Color: </label>
+            <input type="color" name="color" id="color">
+
+            <label for="select">Select: </label>
+            <select name="select" id="select">
+                <option value="0">Select</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+            </select>
+
+            <label for="radio">Radius</label>
+            <label class="lbRadio">
+                <input type="radio" name="radio" class="radio" value="1" checked>
+                Option 1
+            </label>
+            <label class="lbRadio">
+                <input type="radio" name="radio" class="radio" value="2">
+                Option 2
+            </label>
+
+            <label>Checkbox:</label>
+            <label class="lbCheckbox">
+                <input type="checkbox" name="html" value="html" class="checkbox">
+                HMTL
+            </label>
+            <label class="lbCheckbox">
+                <input type="checkbox" name="css" value="css" class="checkbox">
+                CSS
+            </label>
+            <label class="lbCheckbox">
+                <input type="checkbox" name="javascript" value="javascript" class="checkbox">
+                Javascript
+            </label>
+
+            <label for="txtArea">Text Area:</label>
+            <textarea name="txtArea" id="txtArea" cols="30" rows="10" placeholder="Enter your message"></textarea>
+
+            <label for="txtArea2">Text Area with readonly:</label>
+            <textarea name="txtArea2" id="txtArea2" cols="30" rows="10" readonly>Mussum Ipsum, cacilds vidis litro abertis. Delegadis gente finis, bibendum egestas augue arcu ut est. Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio. Aenean aliquam molestie leo, vitae iaculis nisl.</textarea>
+        </form>
+    </body>
+</html>
