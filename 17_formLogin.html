@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing form">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            body{
+                background-color: #ccc;
+            }
+
+            .formLogin{
+                width: 250px;
+                margin: 10% auto;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .formLogin fieldset{
+                background-color: rgb(190, 207, 240);
+                border-radius: 10px;
+            }
+
+            .formLogin legend{
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .lbLogin, #user, #pass, #btn{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .lbLogin, #btn{
+                margin-top: 20px;
+            }
+
+            #user, #pass, #btn{
+                padding: 5px;
+            }
+
+            #btn{
+                margin-bottom: 20px;
+            }
+
+            #fPass{
+                float: right;
+                font-size: 12px;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+                <legend>Login</legend>
+
+                <label for="user" class="lbLogin">User:</label>
+                <input type="text" id="user" name="user" autofocus>
+
+                <label for="pass" class="lbLogin">Password:</label>
+                <input type="password" id="pass" name="pass">
+
+                <input type="submit" id="btn" value="Enter">
+
+                <a href="#" id="fPass">Forgotten password?</a>
+            </fieldset>
+        </form>
+    </body>
+</html>
