@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Shadow</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing box and text shadow">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1{
+                width: 200px;
+                height: 200px;
+                background-color: aqua;
+                border-radius: 170px 0;
+                margin: 50px;
+
+                box-shadow: 10px 0 0 black,
+                -10px -10px 5px 10px yellow,
+                0 20px 10px -5px red;
+            }
+
+            .p1{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 50px;
+                margin: 50px;
+                font-weight: bold;
+
+                text-shadow: -1px -1px 0 #555,
+                -2px -2px 0 #777,
+                -3px -3px 0 #999,
+                -4px -4px 0 #bbb,
+                -5px -5px 0 #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Box Shadow</h1>
+        <div class="div1"></div>
+
+        <h1>Text Shadow</h1>
+        <p class="p1">HTML - CSS - Javascript</p>
+    </body>
+</html>
