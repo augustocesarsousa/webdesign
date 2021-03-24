@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Transition</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing transition">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: yellowgreen;
+                margin: 5px;
+            }
+
+            #div1{
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: linear;
+            }
+
+            #div1:hover{
+                width: 400px;
+            }
+
+            #div2{
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: ease-in;
+            }
+
+            #div2:hover{
+                width: 400px;
+            }
+
+            #div3{
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: ease-out;
+            }
+
+            #div3:hover{
+                width: 400px;
+            }
+            #div4{
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: ease-in-out;
+            }
+
+            #div4:hover{
+                width: 400px;
+            }
+            #div5{
+                transition-property: width;
+                transition-duration: 1s;
+                transition-timing-function: cubic-bezier(.5,-0.8,.42,1.8);
+            }
+
+            #div5:hover{
+                width: 400px;
+            }
+
+            #div6{
+                transition-property: all;
+                transition-duration: 1s;
+                transition-timing-function: cubic-bezier(.5,-0.8,.42,1.8);
+            }
+
+            #div6:hover{
+                width: 400px;
+                height: 200px;
+            }
+
+            #div7{
+                transition-property: width, height;
+                transition-duration: 1s, 1s;
+                transition-timing-function: cubic-bezier(.5,-0.8,.42,1.8);
+                transition-delay: 0s, 1s;
+            }
+
+            #div7:hover{
+                width: 400px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Transition</h1>
+
+        <div id="div1">linear</div>
+        <div id="div2">ease-in</div>
+        <div id="div3">ease-out</div>
+        <div id="div4">ease-in-out</div>
+        <div id="div5">cubic-bezier</div>        
+        <div id="div6">all</div>
+        <div id="div7">with delay</div>
+    </body>
+</html>
