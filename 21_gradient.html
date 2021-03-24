@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Gradient</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing gradient">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            div{
+                width: 200px;
+                height: 200px;
+                background-color: black;
+                float: left;
+                margin: 5px;
+            }
+
+            #div1{                
+                background-image: linear-gradient(to top, green, yellow);
+            }
+            
+            #div2{                
+                background-image: linear-gradient(to right, green, yellow);
+            }
+            
+            #div3{                
+                background-image: linear-gradient(to bottom, green, yellow);
+            }
+
+            #div4{                
+                background-image: linear-gradient(to left, green, yellow);
+            }
+
+            #div5{                
+                background-image: linear-gradient(45deg, green, yellow);
+            }
+
+            #div6{                
+                background-image: linear-gradient(to right, green, yellow, blue);
+            }
+
+            #div7{                
+                background-image: linear-gradient(to right, green 33%, yellow 33%,
+                 yellow 66%, blue 66%);
+            }
+            
+            #div8{                
+                background-image: linear-gradient(blue, transparent),
+                url(images/html5.png);
+               background-size: contain, cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+        <div id="div6"></div>
+        <div id="div7"></div>
+        <div id="div8"></div>
+    </body>
+</html>
