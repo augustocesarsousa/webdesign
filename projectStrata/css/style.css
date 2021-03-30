@@ -8,6 +8,95 @@ a{
     transition: color .2s linear, border .2s linear;
     text-decoration: none;
     border-bottom: 1px dotted;
+    color: #49bf9d
+}
+
+p{
+    margin: 0 0 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #787878;
+    font-weight: normal;
+    margin: 1em 0;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+h3{
+    font-size: 26;
+}
+
+h4{
+    font-size: 22px;
+}
+
+h5{
+    font-size: 18px;
+}
+
+h6{
+    font-size: 15px;
+}
+
+sub, sup{
+    font-size: 12px;
+}
+
+blockquote{
+    border-left: 5px solid #efefef;
+    margin: 2em 0;
+    padding: .5em 0 .5em 1.5em;
+    background-color: #f7f7f7;
+}
+
+code{
+    background-color: #f7f7f7;
+    border-radius: .35em;
+    border: 2px solid #efefef;
+    font-size: .9em;
+    padding: 0.25em 0.65em;
+    font-family: "courier new", monospace;
+    color: #929292;
+}
+
+pre code{
+    display: block;
+}
+
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.ul-alternate{
+    list-style-type: none;
+}
+
+.ul-alternate li{
+    border-bottom: 1px solid #ccc;
+}
+
+.ul-alternate li:last-child{
+    border: 0;
+}
+
+.ul-icons{
+    list-style-type: none;
+}
+
+.ul-icons li{
+    display: inline-block;
+    font-size: 1.5em;
+    color: #49bf9d;
+    letter-spacing: .25em;
 }
 
 a:hover{
@@ -55,3 +144,11 @@ a:hover{
     box-sizing: border-box;
 }
 
+.row{
+    overflow: auto;
+}
+
+.col-2{
+    width: 50%;
+    float: left;
+}
