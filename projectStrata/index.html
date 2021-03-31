@@ -22,9 +22,9 @@
             <h1 class="header-main-title">
                 Jobs and travels from <br>
                 <strong>Augusto Cesar</strong> <br>
-                learning world of Web Design <br>
-                More in <a href="https://github.com/augustocesarsousa" target="_blank" class="header-main-link">Github</a>
+                learning world of Web Design <br>                
             </h1>
+            <p>More in <a href="https://github.com/augustocesarsousa" target="_blank" class="header-main-link">Github</a></p>
         </header>
         <main class="content-main">
             <section class="content-main-section">
@@ -125,17 +125,17 @@
                         <address class="content-main-section-address">
                             <p>
                                 <i class="fas fa-house-user"></i>
-                                <span>Address</span>
+                                <span class="hidden">Address</span>
                                 Cidade X, São Paulo - Brazil, 00000-000
                             </p>
                             <p>
                                 <i class="fas fa-phone"></i>
-                                <span>Phone</span>
+                                <span class="hidden">Phone</span>
                                 000-000-000
                             </p>
                             <p>
                                 <i class="fas fa-envelope-square"></i>
-                                <span>E-mail</span>
+                                <span class="hidden">E-mail</span>
                                 email@server.com
                             </p>
                         </address>
@@ -159,8 +159,8 @@
                 <h6>Title H6</h6>
 
                 <blockquote cite="http://developer.mozilla.org">
-                    This is a quote taken from 
-                    Mozilla Developer Center.
+                    <p>This is a quote taken from 
+                    Mozilla Developer Center.</p>
                 </blockquote>
                   
                 <p>According to Mozilla's website,
@@ -171,13 +171,11 @@
 
                 <h4>Preformed</h4>
                 
-                <pre> 
-                    <code>
+                <pre><code>
     &lt;script&gt;
         alert('hello');
     &lt;/script&gt;
-                        </code>
-                </pre>
+                </code></pre>
 
                 <h4>Lists</h4>
                 
@@ -207,10 +205,10 @@
 
                         <h5>Icons</h5>
                         <ul class="ul-icons">
-                            <li><i class="fab fa-twitter"></i></li>
-                            <li><i class="fab fa-facebook-square"></i></li>
-                            <li><i class="fab fa-instagram-square"></i></li>
-                            <li><i class="fab fa-github-square"></i></li>
+                            <li><span class="hidden">Twitter</span><i class="fab fa-twitter"></i></li>
+                            <li><span class="hidden">Facebook</span><i class="fab fa-facebook-square"></i></li>
+                            <li><span class="hidden">Intagram</span><i class="fab fa-instagram-square"></i></li>
+                            <li><span class="hidden">Github</span><i class="fab fa-github-square"></i></li>
                         </ul>
                     </div>
                 </div>
@@ -359,37 +357,39 @@
                 <input type="submit" class="button-default" value="Send">
 
                 <h5>Forms</h5>
-                
-                <div class="row">
-                    <div class="col-2">
-                        <label for="name">Name</label>
-                        <input type="text" name="name" id="name">
+
+                <form action="#" method="POST">                
+                    <div class="row">
+                        <div class="col-2">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="col-2">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                </div>
-                                
-                <select>
-                    <option value="0"> Select ...</option>
-                    <option value="1"> HTML</option>
-                    <option value="2"> CSS</option>
-                    <option value="3"> Javascript</option>                    
-                </select>
-                
-                <label><input type="radio" value="1" name="option"> Option 1</label>
-                <label><input type="radio" value="2" name="option"> Option 2</label>
-                <label><input type="radio" value="3" name="option"> Option 3</label>
-                
-                <label> <input type="checkbox" name="copy" value="1">Send a copy</label>
-                <label> <input type="checkbox" name="human" value="1">I'm human</label>
-                
-                <label for="msg">Message:</label>                
-                <textarea placeholder="write your message" id="msg"></textarea>
-                
-                <input type="submit" class="button-default" value="Send">
-                <input type="reset" class="button-default button-default-stroke" value="Clean">
+                                    
+                    <select>
+                        <option value="0"> Select ...</option>
+                        <option value="1"> HTML</option>
+                        <option value="2"> CSS</option>
+                        <option value="3"> Javascript</option>                    
+                    </select>
+                    
+                    <label><input type="radio" value="1" name="option"> Option 1</label>
+                    <label><input type="radio" value="2" name="option"> Option 2</label>
+                    <label><input type="radio" value="3" name="option"> Option 3</label>
+                    
+                    <label> <input type="checkbox" name="copy" value="1">Send a copy</label>
+                    <label> <input type="checkbox" name="human" value="1">I'm human</label>
+                    
+                    <label for="msg">Message:</label>                
+                    <textarea placeholder="write your message" id="msg"></textarea>
+                    
+                    <input type="submit" class="button-default" value="Send">
+                    <input type="reset" class="button-default button-default-stroke" value="Clean">
+                </form>
             </section>
 
             <section class="main-content-section">
@@ -427,10 +427,30 @@
         </main>
         <footer class="footer-main">
             <ul class="ul-icons">
-                <li><a href="#" class="icon-link"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="icon-link"><i class="fab fa-facebook-square"></i></a></li>
-                <li><a href="#" class="icon-link"><i class="fab fa-github-square"></i></a></li>
-                <li><a href="#" class="icon-link"><i class="fas fa-envelope-square"></i></a></li>
+                <li>
+                    <span class="hidden">Twitter</span>
+                    <a href="#" class="icon-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <span class="hidden">Facebook</span>
+                    <a href="#" class="icon-link">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <span class="hidden">Github</span>
+                    <a href="#" class="icon-link">
+                        <i class="fab fa-github-square"></i>
+                    </a>
+                </li>
+                <li>
+                    <span class="hidden">E-mail</span>
+                    <a href="#" class="icon-link">
+                        <i class="fas fa-envelope-square"></i>
+                    </a>
+                </li>
             </ul>
             <ul class="copyright">
                 <li>&copy; Untitled |</li>

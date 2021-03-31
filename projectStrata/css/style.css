@@ -91,6 +91,10 @@ blockquote{
     background-color: #f7f7f7;
 }
 
+blockquote p{
+    margin-bottom: 0;
+}
+
 code{
     background-color: #f7f7f7;
     border-radius: .35em;
@@ -109,6 +113,14 @@ ul, ol{
     margin: 0;
     padding: 0;
     list-style-position: inside;
+}
+
+.hidden{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .ul-alternate{
@@ -231,7 +243,6 @@ ul, ol{
     background-image: url(../images/overlay.png), url(../images/bg.jpg);
     background-position: left top;
     background-size: auto, cover;
-    background-color: bisque;
     text-align: right;
 }
 
@@ -253,6 +264,10 @@ ul, ol{
 
 .header-main-link:hover{
     color: #49bf9e;
+}
+
+.header-main p{
+    color: rgba(255, 255, 255, .5);
 }
 
 .content-main{
@@ -349,17 +364,13 @@ ul, ol{
     text-align: right;
 }
 
-.ul-icons li, .copyright li{
-    display: inline;
-}
-
 .icon-link{
     color: #666;
     border-bottom-color: transparent;
-    margin-left: .75em;
 }
 
 .copyright li{
+    display: inline-block;
     font-size: 14px;
 }
 
