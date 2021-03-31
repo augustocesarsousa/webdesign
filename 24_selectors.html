@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Selectors</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing selectors">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            article:nth-child(1) a{
+                color: red;
+            }
+
+            article:nth-child(3) > p{
+                color: red;
+            }
+
+            article:nth-child(5) h3 + p{
+                margin-top: 50px;
+            }
+
+            article:nth-child(7) h3 ~ p{
+                color: orange;
+            }
+
+            article:not(.featured){
+                color: green;
+            }
+
+            .featured{
+                background-color: yellow;
+            }
+
+            a[href="#"]{
+                opacity: .2;
+            }
+
+            a[href^="http"]{
+                color: chartreuse;
+            }
+
+            a[href$=".html"]{
+                color: crimson
+            }
+
+            a[title]{
+                color: burlywood;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h3>
+                article:nth-child(1) a
+            </h3>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                article:nth-child(3) > p
+            </h3>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+        </article>
+
+        <hr>
+
+        <article>
+            <h3>
+                article:nth-child(5) h3 + p
+            </h3>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+        </article>
+
+        <hr>
+
+        <article>
+            <p>before title</p>
+            <h3>
+                article:nth-child(7) h3 ~ p
+            </h3>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+        </article>
+
+        <hr>
+
+        <article class="featured">
+            <h3>
+                article:not(.featured)
+            </h3>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+            <p>paragraph <a href="#"> only a link with <b>bold</b></a></p>
+        </article>
+
+        <br>
+
+        <ul>
+            <li>
+                <a href="#">fake link a[href="#"]</a>
+            </li>
+            <li>
+                <a href="#">fake link a[href="#"]</a>
+            </li>
+            <li>
+                <a href="http://www.google.com.br" target="_blank">external link a[href^="http"]</a>
+            </li>
+            <li>
+                <a href="23_transition.html" target="_blank">internal link a[href$=".html"]</a>
+            </li>
+            <li>
+                <a href="images/slide1.jpg" target="_blank" title="image">internal link 2 a[title]</a>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </body>
+</html>
