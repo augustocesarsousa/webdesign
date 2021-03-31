@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Before and After</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing before and after">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            div{
+                border: 2px solid red;
+                padding: 25px;
+                margin-top: 25px;
+                width: 300px;
+                position: relative;
+            }
+
+            div::before{
+                content: "text before - ";
+                background-color: #ccc;
+            }
+
+            div::after{
+                content: "text after";
+                width: 60px;
+                height: 25px;
+                background-color: blue;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div>text main</div>
+    </body>
+</html>
