@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Pseudo class</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing pseudo class">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            input[type="checkbox"]:checked{
+                width: 25px;
+                height: 25px;
+            }
+
+            button{
+                display: block;
+                margin: 1em 1em 1em 0;
+            }
+
+            button:disabled{
+                color: blue;
+            }
+
+            p:empty::before{
+                content: "paragraph empty!";
+            }
+
+            input[type="text"]:focus{
+                background-color: aquamarine;
+            }
+
+            a:focus, a:hover, div:focus{
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <label><input type="checkbox" value="y"> quick here</label>
+
+        <button>Button 1</button>
+        <button disabled>Button 2</button>
+
+        <p>paragraph 1</p>
+        <p> </p>
+        <p></p>
+
+        <input type="text">
+
+        <ul>
+            <li><a href="#">fake link</a></li>
+            <li><a href="#">fake link</a></li>
+            <li><a href="#">fake link</a></li>
+            <li><a href="#">fake link</a></li>
+        </ul>
+
+        <div tabindex="1">div 1</div>
+        <div tabindex="2">div 2</div>
+        <div tabindex="3">div 3</div>
+    </body>
+</html>
