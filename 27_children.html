@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Children</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing children">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+    </head>
+
+    <style>
+        p:nth-of-type(4){
+            color:coral;
+        }
+
+        p:nth-child(2){
+            color: darkgreen;
+        }
+
+        .featured{
+            background-color: #ccc;
+        }
+
+        .featured:first-child{
+            color: darkred;
+        }
+
+        p:last-child{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div>
+            <p class="featured">test paragraph</p>
+            <p>test paragraph</p>
+            <hr>
+            <p class="featured">test paragraph</p>
+            <p>test paragraph</p>
+            <hr>
+            <p>test paragraph</p>
+            <p class="featured">test paragraph</p>
+            <hr>
+            <p>test paragraph</p>
+            <p>test paragraph</p>
+            <hr>
+            <p>test paragraph</p>
+            <p>test paragraph</p>
+        </div>
+    </body>
+</html>
