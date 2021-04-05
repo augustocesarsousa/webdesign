@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Transform</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing transform">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1, .div2, .div3, .div4{
+                width: 370px;
+                height: 130px;
+                border: 2px solid black;
+                margin: 10px;
+            }
+
+            .div1x, .div1y, .div1xy{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+            }
+
+            .div1x{
+                background-color: red;
+                transform: translateX(50%);
+            }
+
+            .div1y{
+                background-color: green;
+                transform: translateY(50%);
+            }
+
+            .div1xy{
+                background-color: blue;
+                transform: translate(50%, 50%);
+            }
+
+            .div2x, .div2y, .div2xy{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+            }
+
+            .div2x{
+                background-color: red;
+                transform: rotate(180deg);
+            }
+
+            .div2y{
+                background-color: green;
+                transform: rotate(-20deg);
+                transform-origin: left;
+            }
+
+            .div2xy{
+                background-color: blue;
+                transform: rotate(90deg);
+                transform-origin: right bottom;
+            }
+
+            .div3x, .div3y, .div3xy{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+            }
+
+            .div3x{
+                background-color: red;
+                transform: skewX(30deg);
+            }
+
+            .div3y{
+                background-color: green;
+                transform: skewY(20deg);
+            }
+
+            .div3xy{
+                background-color: blue;
+                transform: skew(10deg, 20deg);
+            }
+
+            .div4x, .div4y, .div4xy{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin: 10px;
+                float: left;
+            }
+
+            .div4x{
+                background-color: red;
+                transform: scaleX(1.5);
+            }
+
+            .div4y{
+                background-color: blue;
+                transform: scaleY(.6);
+            }
+
+            .div4xy{
+                background-color: green;
+                transform: scale(.6, 1.3);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="div1">
+            <div class="div1x">translate X 50%</div>
+            <div class="div1y">translate Y 50%</div>
+            <div class="div1xy">translate <br>X and Y 50%</div>
+        </div>
+        <div class="div2">
+            <div class="div2x">rotate 180deg</div>
+            <div class="div2y">rotate -20deg <br>transform left</div>
+            <div class="div2xy">rotate 90deg <br>transform right bottom</div>
+        </div>
+        <div class="div3">
+            <div class="div3x">skew X <br>30deg</div>
+            <div class="div3y">skew Y <br>20deg</div>
+            <div class="div3xy">skew <br>10deg em 20deg</div>
+        </div>
+
+        <div class="div4">
+            <div class="div4x">scale X <br>1.5</div>
+            <div class="div4y">scale Y <br>.6</div>
+            <div class="div4xy">scale <br>X and Y <br>.6 and 1.3</div>
+        </div>
+    </body>
+</html>
