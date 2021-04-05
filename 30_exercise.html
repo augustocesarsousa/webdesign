@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Exercise</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            a[target="_blanck"]::after{
+                content: url("images/newWindow.png");
+                display: inline-block;
+                margin-left: 5px;
+            }
+
+            a[href$='.pdf']::before{
+                content: url("images/pdf-icon.gif");
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+            .chk{
+                display: inline-block;
+                border-radius: 5px;
+                border: 2px solid #bbb;
+                background-color: #ddd;
+                width: 15px;
+                height: 15px;
+                margin-right: 10px;
+            }
+
+            label{
+                height: 15px;
+                display: inline-block;
+            }
+
+            input[type="checkbox"]{
+                width: 1px;
+                height: 1px;
+                overflow: hidden;
+                visibility: hidden;
+                margin: 0;
+                display: inline-block;
+            }
+
+            input[type="checkbox"]:checked + label .chk{
+                background-color: #555;
+                position: relative;
+            }
+
+            input[type="checkbox"]:checked + label .chk::before{
+                content: '';
+                display: block;
+                border: 2px solid white;
+                position: absolute;
+                top: 0;
+                right: 4px;
+                bottom: 4px;
+                left: 4px;
+                transform: rotate(45deg);
+                border-top-color: transparent;
+                border-left-color: transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exercise</h1>
+
+        <p><a href="http://github.com/augustocesarsousa" target="_blanck">external link</a></p>
+        <p><a href="file.pdf">donwload file</a></p>
+        <hr>
+        <input type="checkbox" id="chk">
+        <label for="chk"><span class="chk"></span>accept contract</label>
+    </body>
+</html>
