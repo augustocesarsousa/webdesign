@@ -12,13 +12,12 @@
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 36px;
             }
+            
             label input{
                 width: 1px;
                 height: 1px;
                 overflow: hidden;
-                visibility: hidden;
-                margin: 0;
-                display: inline-block;
+                opacity: 0;
             }
 
             label span{
@@ -45,6 +44,10 @@
                 content: '';
                 transform: translate(30px);
                 background-color: black;
+            }
+
+            label input:focus + span{
+                box-shadow: 0 0 0 2px black;
             }
         </style>
     </head>
