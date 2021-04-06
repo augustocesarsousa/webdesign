@@ -377,12 +377,33 @@
                         <option value="3"> Javascript</option>                    
                     </select>
                     
-                    <label><input type="radio" value="1" name="option"> Option 1</label>
-                    <label><input type="radio" value="2" name="option"> Option 2</label>
-                    <label><input type="radio" value="3" name="option"> Option 3</label>
+                    <label for="opt1">
+                        <input type="radio" value="1" name="option" class="selection" id="opt1">
+                        <span class="rdo"></span>
+                        Option 1
+                    </label>
+                    <label for="opt2">
+                        <input type="radio" value="2" name="option"
+                        class="selection" id="opt2">
+                        <span class="rdo"></span>
+                        Option 2
+                    </label>
+                    <label for="opt3">
+                        <input type="radio" value="3" name="option" class="selection" id="opt3">
+                        <span class="rdo"></span>
+                        Option 3
+                    </label>
                     
-                    <label> <input type="checkbox" name="copy" value="1">Send a copy</label>
-                    <label> <input type="checkbox" name="human" value="1">I'm human</label>
+                    <label for="copy"> 
+                        <input type="checkbox" name="copy" id="copy" value="1" class="selection">
+                        <span class="chk"></span>
+                        Send a copy
+                    </label>
+                    <label for="human"> 
+                        <input type="checkbox" name="human" id="human" value="1" class="selection">
+                        <span class="chk"></span>
+                        I'm human
+                    </label>
                     
                     <label for="msg">Message:</label>                
                     <textarea placeholder="write your message" id="msg"></textarea>

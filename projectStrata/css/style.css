@@ -353,6 +353,77 @@ ul, ol{
     text-align: justify;
 }
 
+label .selection{
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.rdo{
+    display: inline-block;
+    border-radius: 5px;
+    border: 2px solid #bbb;
+    background-color: #ddd;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    
+}
+
+label input[type="radio"]:checked + .rdo{
+    background-color: #555;
+    position: relative;
+}
+
+label input[type="radio"]:checked + .rdo::before{
+    content: '';
+    display: block;
+    border: 2px solid white;
+    position: absolute;
+    top: 0;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    transform: rotate(45deg);
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+label .selection:focus + .rdo{
+    box-shadow: 0 0 0 2px #49bf9d;
+}
+
+label .chk{
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    background-color: #bbb;
+    border-radius: 7.5px;
+    margin-right: 5px;
+}
+
+label .chk::before{
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 2px;
+    transition: all .2s linear;
+}
+
+label input:checked + .chk::before{
+    content: '';
+    transform: translate(15px);
+    background-color: #49bf9d;
+}
+
+label .selection:focus + .chk{
+    box-shadow: 0 0 0 2px #49bf9d;
+}
+
 .footer-main{
     position: fixed;
     bottom: 0;
