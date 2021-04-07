@@ -1,0 +1,39 @@
+@charset "UTF-8"
+
+html{
+    font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oxygen";
+}
+
+.header-main{
+    text-align: center;
+}
+
+.header-img{
+    margin: .5em;
+}
+
+.nav-main{
+    background-color: #612674;
+    text-align: center;
+}
+
+.nav-main ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-main a{
+    color: #fff;
+    text-decoration: none;
+    padding: 1em;
+    display: block;
+}
+
+.nav-main a:hover{
+    background-color: #7c3792;
+}
