@@ -68,3 +68,25 @@ h1,h2,h3,h4,h5,h6{
     font-size: 1em;
     line-height: 1.2;
 }
+
+.middle-content{
+    padding: 2em;
+    background-color: #f6f6f6;
+    text-align: center;
+}
+
+.middle-content-title{
+    font-size: 1.25em;
+    color: #652e78;
+    text-transform: uppercase;
+}
+
+.middle-content p{
+    line-height: 1.5;
+    color: #222;
+}
+
+.middle-content span[class^=icon]{
+    font-size: 3em;
+    color: #652e78;
+}
