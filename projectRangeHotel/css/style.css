@@ -195,4 +195,11 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+@media screen and (min-width: 62.5em){
+    .top-content{
+        background: #521a66 url(../images/bg_topo_1198x670.jpg);
+        height: 15em;
+        padding-top: 15em;
+    }
+}
 
