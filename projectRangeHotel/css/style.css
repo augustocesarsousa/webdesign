@@ -14,6 +14,16 @@ h1,h2,h3,h4,h5,h6{
     clear: both;
 }
 
+.icon-play{
+    height: 5em;
+    display: none;
+}
+
+.icon-play img{
+    max-height: 100%;
+    max-width: 100%;
+}
+
 .button-default{
     display: inline-block;
     padding: .9em 2.5em;
@@ -176,6 +186,10 @@ h1,h2,h3,h4,h5,h6{
         background-color: #e7d9fe;
     }
 
+    .icon-play{
+        display: block;
+    }
+
     .top-content{
         background-color: #521a66;
     }
@@ -198,12 +212,24 @@ h1,h2,h3,h4,h5,h6{
 @media screen and (min-width: 62.5em){
     .top-content{
         background: #521a66 url(../images/bg_topo_1198x670.jpg);
-        height: 15em;
+        background-position: center bottom;
+        height: 22em;
         padding-top: 15em;
+    }
+
+    .icon-play{
+        height: 7em;
     }
 }
 
-@media screen and (min-width: 64em){
+@media screen and (min-width: 74em){
+
+    .maxwidth{
+        width: 1124px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .top-content{
         background: #521a66 url(../images/bg_topo_1600x1374.jpg);
         padding: 19em 18em 10em;
