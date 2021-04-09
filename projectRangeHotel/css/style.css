@@ -110,4 +110,35 @@ h1,h2,h3,h4,h5,h6{
     line-height: 1.2;
 }
 
+.hidden{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.main-footer{
+    background-color: #25303e;
+    color: #83869f;
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.main-footer-menu{
+    background-color: #303d4c;
+    padding: .5em;
+}
+
+.main-footer-menu li{
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.main-footer-menu a{
+    text-decoration: none;
+    font-size: 1.1em;
+    color: #fff;
+}
+
 
