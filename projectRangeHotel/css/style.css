@@ -203,3 +203,26 @@ h1,h2,h3,h4,h5,h6{
     }
 }
 
+@media screen and (min-width: 64em){
+    .top-content{
+        background: #521a66 url(../images/bg_topo_1600x1374.jpg);
+        padding: 19em 18em 10em;
+        background-position: center top;
+    }
+
+    .col-1-4{
+        width: 23%;
+        margin: 1%;
+        float: left;
+    }
+
+    .col-1-2{
+        width: 48%;
+        margin: 1%;
+        float: left;
+    }
+
+    .main-content-article .button-default{
+        float: none;
+    }
+}
