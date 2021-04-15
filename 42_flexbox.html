@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Flexbox</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing flexbox">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <style>
+            .main{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+
+            .flexbox{
+                height: 250px;
+                border: 1px solid red;                
+                margin-bottom: 15px;
+                display: flex;
+            }
+
+            .flexbox div{
+                background-color: orange;
+                width: 300px;
+                margin: 15px;
+            }
+
+            .flexbox:nth-child(2){
+                /* flex-direction: row;
+                flex-wrap: wrap; */
+                flex-flow: row nowrap;
+            }
+
+            .flexbox:nth-child(3){
+                justify-content: space-between;
+            }
+
+            .flexbox:nth-child(3) div{
+                width: 30px;
+            }
+
+            .flexbox:nth-child(4){
+                align-items: center;
+                justify-content: center;
+            }
+
+            .flexbox:nth-child(5) div{
+                width: 30px;
+            }
+
+            .flexbox:nth-child(5){
+                align-items: baseline;
+                justify-content: space-evenly;
+            }
+
+            .flexbox:nth-child(6){
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: stretch;
+            }
+
+            .flexbox:nth-child(6) div{
+                width: 150px;
+            }
+
+            .flexbox:nth-child(7){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexbox:nth-child(7) div{
+                background-color: yellow;
+                flex-basis: 50px;
+                height: 50px;
+            }
+
+            .flexbox:nth-child(8){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .flexbox:nth-child(8) div{
+                background-color: yellow;
+                flex-basis: 50px;
+                height: 50px;
+            }
+
+            .flexbox:nth-child(8) div:nth-child(2){
+                flex-grow: 2;
+            }
+
+            .flexbox:nth-child(8) div:nth-child(4){
+                flex-grow: 1;
+            }
+
+            .flexbox:nth-child(9) div{
+                background-color: yellow;
+                flex-basis: 300px;
+                height: 50px;
+            }
+
+            .flexbox:nth-child(9) div:nth-child(2){
+                flex-shrink: 3;
+            }
+
+            .flexbox:nth-child(9) div:nth-child(4){
+                /* grow shrink basis */
+                flex: 0 1 100px;
+            }
+
+            .flexbox:nth-child(10) div{
+                background-color: yellowgreen;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(2){
+                order: 3;
+            }
+
+            .flexbox:nth-child(10) div:nth-child(1){
+                order: 4;
+            }
+
+            .flexbox:nth-child(11){
+                align-items: flex-start;
+            }
+
+            .flexbox:nth-child(11) div{
+                background-color: yellowgreen;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(1){
+                align-self: stretch;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(2){
+                align-self: flex-end;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(3){
+                align-self: center;
+            }
+
+            .flexbox:nth-child(11) div:nth-child(4){
+                align-self: flex-start;
+            }
+
+            .flexbox:nth-child(12){
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                height: 500px;
+            }
+
+            .flexbox:nth-child(12) div{
+                background-color: yellowgreen;
+                flex-basis: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Flexbox</h1>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+            
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2" style="font-size: 4em;">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+
+            <div class="flexbox">
+                <div class="div1">1</div>
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+            </div>
+        </div>
+    </body>
+</html>
