@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Grid</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing grid layout">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <style>
+            .gridContent{
+                width: 90%;
+                background: #ccc;
+                margin: 30px auto;
+            }
+
+            .gridItem{
+                background-color: orange;
+                padding: 15px;
+                font-family: sans-serif;
+            }
+
+            /* GRID */
+            .gridContent{
+                display: grid;
+                /* grid-template-columns: 
+                    [col1-start] 1fr 
+                    [col1-end col2-start] 1fr 
+                    [col2-end col3-start] 1fr 
+                    [col3-end]; */
+                grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+                grid-template-rows: 
+                    [header-start] 100px 
+                    [header-end nav-start] 50px 
+                    [nav-end main-start] 1fr 
+                    [main-end footer-start] 50px
+                    [footer-end];
+                gap: 20px;
+            }
+            
+            .header{
+                /* grid-column: col1-start / col3-end; */
+                grid-column: col-start 1 / col-end 3;
+                /* grid-row: header-start / header-end; */
+                grid-row: header;
+            }
+
+            .nav{
+                /* grid-column: col1-start / col3-end; */
+                grid-column: col-start 1 / col-end 3;
+                /* grid-row: nav-start / nav-end; */
+                grid-row: nav;
+            }
+
+            .aside{
+                /* grid-column: col3-start / col3-end; */
+                grid-column: col-start 3 / col-end 3;
+                grid-row: main-start / footer-end;
+            }
+
+            .main{
+                /* grid-column: col1-start / col2-end; */
+                grid-column: col-start 1 / col-end 2;
+                /* grid-row: main-start / main-end; */
+                grid-row: main;
+                height: 200px;
+            }
+
+            .footer{
+                /* grid-column: col1-start / col3-end; */
+                /* grid-column: col-start 1 / col-end 3; */
+                grid-column: col-start / span 3;
+                /* grid-row: footer-start / footer-end; */
+                grid-row: footer;
+                background-color: rgba(255,0,0,.5);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Grid Layout</h1>
+
+        <div class="gridContent">
+            <header class="header gridItem">header</header>
+            <nav class="nav gridItem">nav</nav>
+            <aside class="aside gridItem">aside</aside>
+            <main class="main gridItem">
+                main
+            </main>
+            <footer class="footer gridItem">footer</footer>
+        </div>
+    </body>
+</html>
