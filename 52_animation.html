@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Animation</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing animation">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        
+        <style>
+            @keyframes walk {
+                0%{
+                    transform: translateX(0);
+                    background-color: yellow;
+                }
+                100%{
+                    transform: translateX(300px);
+                    background-color: blue;
+                }
+            }
+
+            .ani-time div{
+                width: 80px;
+                height: 50px;
+                border: 2px solid red;
+            }
+
+            .ani-time div:nth-child(1){
+                /* animation-name: walk;
+                animation-duration: 2s;
+                animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+                animation: walk 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+
+            .ani-time div:nth-child(2){
+                /* animation-name: walk;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate; */
+
+                animation: walk 2s ease-in-out infinite alternate;
+            }
+
+            .ani-time div:nth-child(3){
+                /* animation-name: walk;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate; */
+
+                animation: walk 2s ease-in-out 1s infinite alternate;
+            }
+
+            .ani-time div:nth-child(4){
+
+                background-color: red;
+
+                animation-name: walk;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 2s;
+                animation-iteration-count: 2;
+                animation-direction: alternate;
+                animation-fill-mode: backwards;
+
+            }
+
+            .ani-time div:nth-child(5){
+
+                background-color: green;
+
+                animation-name: walk;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 2s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-fill-mode: backwards;
+                animation-play-state: running;
+
+            }
+
+            .ani-time div:nth-child(5):hover{
+                animation-play-state: paused;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Animation</h1>
+        <p><code>animation: name duration timing-function delay iteration-count direction fill-mode play-state</code></p>
+        <div class="ani-time">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </body>
+</html>
