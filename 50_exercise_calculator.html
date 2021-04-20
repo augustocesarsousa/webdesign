@@ -23,7 +23,7 @@
                 box-shadow: 1px 1px 5px black;
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                grid-template-rows: repeat(6, 1fr);
+                grid-template-rows: auto repeat(5, 1fr);
                 gap: 5px;
             }
 
@@ -33,6 +33,7 @@
                 border-radius: 10px;
                 text-align: right;
                 padding: 15px;
+                margin-bottom: 15px;
                 grid-column: 1 / 5;
 
             }
@@ -42,6 +43,10 @@
                 font-family: sans-serif;
                 font-size: .8em;
                 border: 3px outset #555;
+            }
+
+            button:first-of-type{
+                background-color: hsl(100deg, 50%, 50%);
             }
 
             .more{
@@ -63,7 +68,7 @@
             <div class="display">0</div>
 
             <button>AC</button><button>%</button><button>x</button><button>/</button>
-            <button>7</button><button>8</button><button>8</button><button>=</button>
+            <button>7</button><button>8</button><button>9</button><button>=</button>
             <button>4</button><button>5</button><button>6</button><button>-</button>
             <button>1</button><button>2</button><button>3</button><button class="more">+</button>
             <button class="zero">0</button><button>,</button>
