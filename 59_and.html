@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>And</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing and javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+    </head>
+    <body>
+        <h1>And</h1>
+
+        <script>
+            var grade1 = parseFloat(prompt("Enter your first exam grade!"));
+            var grade2 = parseFloat(prompt("Enter your second exam grade!"));
+            var avarage = (grade1 + grade2) / 2;
+            
+            if(grade1 > 0 && grade2 > 0 && avarage >= 7){
+                alert("Approved congratulation!");
+            }else{
+                alert("Disapproved, see you in recovery! xD");
+            }            
+        </script>
+    </body>
+</html>
