@@ -15,14 +15,10 @@
             var grade2 = parseFloat(prompt("Enter your second exam grade!"));
             var avarage = (grade1 + grade2) / 2;
             
-            if(grade1 === 0 || grade2 === 0){
+            if(grade1 === 0 || grade2 === 0 || avarage < 7){
                 alert("Disapproved, see you in recovery! xD");
             }else{
-                if(avarage >= 7){
-                alert("Approved congratulation!");
-                }else{
-                    alert("Disapproved, see you in recovery! xD");
-                }
+                alert("Disapproved, see you in recovery! xD");
             }            
         </script>
     </body>
