@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise Calculator v2</title>
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise calculator with javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <meta name="viewport" content="width=device-width">
+
+        <style>
+            body{                
+                font-family: sans-serif;
+                font-size: 1.5em;
+            }
+
+            .calculator{
+                background-color: hsl(250deg, 50%, 50%);
+                width: 300px;
+                height: 400px;
+                border-radius: 10px;
+                padding: 20px;
+                box-sizing: border-box;
+                box-shadow: 1px 1px 5px black;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto repeat(5, 1fr);
+                gap: 5px;
+            }
+
+            .display{
+                background-color: #ccc;
+                border: 4px inset #999;
+                border-radius: 10px;
+                text-align: right;
+                height: 1em;
+                padding: 15px;
+                margin-bottom: 15px;
+                grid-column: 1 / 5;
+
+            }
+
+            button{
+                border-radius: 10px;
+                font-family: sans-serif;
+                font-size: .8em;
+                border: 3px outset #555;
+            }
+
+            button:active{
+                background-color: silver;
+            }
+
+            button:first-of-type{
+                background-color: hsl(40deg, 50%, 50%);
+            }
+
+            button:first-of-type:active{
+                background-color: hsl(40deg, 20%, 50%);
+            }
+
+            .more{
+                grid-column: 4 / 5;
+                grid-row: 5 / 7;
+                background-color: #888;
+            }
+
+            .zero{
+                grid-column: 1 / 3;
+                grid-row: 6 / 7;
+                background-color: #888;
+            }
+            
+        </style>
+
+        <script>
+            var n1 = 0;
+            var n2 = 0;
+            var rs = 0;
+            var op = null;
+
+            function addOnDisplay(number, concat){
+
+                if(concat){
+                    var output = document.querySelector(".display");
+                    var nDisplay = document.querySelector(".display").textContent;
+                    nDisplay += number;
+                    output.innerHTML = nDisplay;
+                }else{
+                    var output = document.querySelector(".display");
+                    output.innerHTML = number;
+                }
+            }
+
+            function clean(){
+                var output = document.querySelector(".display");
+                output.innerHTML = "";
+            }
+
+            function operation(o){
+                n1 = parseFloat(document.querySelector(".display").textContent);
+                op = o;
+                clean();
+            }
+
+            function finalize(){
+                n2 = parseFloat(document.querySelector(".display").textContent);
+
+                switch(op){
+                    case "+":
+                        rs = n1 + n2;
+                        addOnDisplay(rs, false);
+                        break;
+                    case "-":
+                        rs = n1 - n2;
+                        addOnDisplay(rs, false);
+                        break;
+                    case "*":
+                        rs = n1 * n2;
+                        addOnDisplay(rs, false);
+                        break;
+                    case "/":
+                        rs = n1 / n2;
+                        addOnDisplay(rs, false);
+                        break;
+                    case "%":
+                        rs = (n1 * n2) / 100;
+                        addOnDisplay(rs, false);
+                        break;
+                }
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="calculator">
+            <div class="display"></div>
+
+            <button onclick="clean()">AC</button>
+            <button onclick="operation('%')">%</button>
+            <button onclick="operation('*')">x</button>
+            <button onclick="operation('/')">/</button>
+            <button onclick="addOnDisplay(7, true)">7</button>
+            <button onclick="addOnDisplay(8, true)">8</button>
+            <button onclick="addOnDisplay(9, true)">9</button>
+            <button onclick="finalize()">=</button>
+            <button onclick="addOnDisplay(4, true)">4</button>
+            <button onclick="addOnDisplay(5, true)">5</button>
+            <button onclick="addOnDisplay(6, true)">6</button>
+            <button onclick="operation('-')">-</button>
+            <button onclick="addOnDisplay(1, true)">1</button>
+            <button onclick="addOnDisplay(2, true)">2</button>
+            <button onclick="addOnDisplay(3, true)">3</button>
+            <button class="more" onclick="operation('+')">+</button>
+            <button class="zero" onclick="addOnDisplay(0, true)">0</button>
+            <button onclick="addOnDisplay('.', true)">,</button>
+        </div>        
+    </body>
+</html>
