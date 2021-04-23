@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Function with return</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing function with return javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1{
+                border: 4px solid red;
+                height: 100px;
+                width: 200px;
+                text-align: center;
+                padding-top: 35px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Function with return</h1>
+
+        <button onclick="showArea()">Calculate area of rectangle</button>
+
+        <br>
+        <br>
+
+        <div class="div1"></div>
+
+        <script>
+            function showArea(){
+
+                var ht = parseFloat(prompt("Enter height:"));
+                var wd = parseFloat(prompt("Enter width:"));
+                var output = document.querySelector(".div1");
+
+                output.innerHTML = "The rectangle area is " + calculateArea(ht, wd);
+            }
+
+            function calculateArea(ht, wd){
+                return ht * wd;
+            }
+            
+        </script>
+    </body>
+</html>
