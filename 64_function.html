@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Function</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing finction javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+    </head>
+    <body>
+        <h1>Function</h1>
+
+        <button onclick="showText()">Show Text</button>
+
+        <br>
+        <br>
+
+        <div class="div1"></div>
+
+        <script>
+            function showText(){
+                var output = document.querySelector(".div1");
+                output.innerHTML = "Text inserted with a function Javascript!";
+            }
+        </script>
+    </body>
+</html>
