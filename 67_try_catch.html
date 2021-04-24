@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Try catch</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing try catch with javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1{
+                border: 4px solid red;
+                height: 100px;
+                width: 200px;
+                margin-top: 2em;
+                text-align: center;
+                padding-top: 35px;
+                box-sizing: border-box;
+            }
+        </style>
+        <script>
+            function showArea(){
+
+                var ht = parseFloat(prompt("Enter height:"));
+                var wd = parseFloat(prompt("Enter width:"));
+                var output = document.querySelector(".div1");
+
+                output.innerHTML = "";
+
+                try{
+                    output.innerHTML = "The rectangle area is " + calculateArea(ht, wd);
+                }catch(e){
+                    alert(e);
+                }
+            }
+
+            function calculateArea(ht, wd){                
+                if((isNaN(ht) || isNaN(wd)) || (ht === undefined || wd === undefined)){
+                    throw new Error("Please enter a valid number");
+                }else{
+                    return ht * wd;
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Try catch</h1>
+
+        <button onclick="showArea()">Calculate area of rectangle</button>
+
+        <div class="div1"></div>
+    </body>
+</html>
