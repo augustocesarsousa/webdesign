@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Array</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing array javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1{
+                margin-top: 2em;
+            }
+        </style>
+        <script>
+            var list = new Array();
+
+            function addProd(){
+                var prod = prompt("Insert the product");
+                list.push(prod);
+            }
+
+            function showList(){
+                var output = document.querySelector(".div1");
+                var text = "";
+                
+                output.innerHTML = "";
+
+                for(var i = 0; i < list.length; i++){
+                    text += list[i] + "<br>";
+                }
+
+                output.innerHTML = text;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Array</h1>
+
+        <button onclick="addProd()">Add product to list</button>
+        <button onclick="showList()">Show list</button>
+
+        <div class="div1"></div>
+    </body>
+</html>
