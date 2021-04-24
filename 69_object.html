@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Object</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing object javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <style>
+            .div1{
+                margin-top: 2em;
+            }
+        </style>
+        <script>
+            var person = new Object();
+
+            function createPerson(){
+                person.name = prompt("Enter the person name:");
+                person.sex = prompt("Enter the person sex:");
+                person.age = prompt("Enter the person age:");
+            }
+
+            function showPerson(){
+                var output = document.querySelector(".div1");
+                output.innerHTML = "Person name: " + person.name + "<br>" +
+                                   "Person sex: " + person.sex + "<br>" +
+                                   "Person age: " + person.age + "<br>";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Object</h1>
+
+        <button onclick="createPerson()">Create person</button>
+        <button onclick="showPerson()">Show person</button>
+
+        <div class="div1"></div>
+    </body>
+</html>
