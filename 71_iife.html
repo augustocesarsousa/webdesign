@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>IIFE</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing IIFF with javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+
+        <script>
+            (function(){
+                try{
+                    var quantity = quantityNumbers();
+                }catch(e){
+                    alert(e);
+                    return;
+                }
+
+                try{
+                    var totNumbers = addNumbers();
+                }catch(e){
+                    alert(e);
+                    return;
+                }
+
+                alert("Average is: " + average());
+
+                function quantityNumbers(){
+                    var numbers = parseInt(prompt("How many numbers do you want to calculate?"));
+                    if(isNaN(numbers)){
+                        throw new Error("Please only enter numbers!");
+                    }else{
+                        return numbers;
+                    }
+                }
+
+                function addNumbers(){
+                    var totNumbers = 0;
+                    for(var i = 0; i < quantity; i++){
+                        var number = parseFloat(prompt("Enter the number " + (i+1) + ":"));
+                        if(isNaN(number)){
+                            throw new Error("Please only enter numbers!");
+                        }else{
+                            totNumbers += number;
+                        }
+                    }
+                    return totNumbers;
+                }
+
+                function average(){
+                    return totNumbers / quantity;
+                }
+
+            })();
+        </script>
+    </head>
+    <body>
+        <h1>IIFE</h1>
+    </body>
+</html>
