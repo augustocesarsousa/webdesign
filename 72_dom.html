@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>DOM</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing DOM Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">        
+    </head>
+    <body>
+        <h1>DOM</h1>
+
+        <p id="p0" class="pAll">Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.</p>
+        <p id="p1" class="pAll">Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.</p>
+        <p id="p2" class="pAll">Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.</p>
+        <p id="p3" class="pAll">Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.</p>
+        <p id="p4" class="pAll">Mussum Ipsum, cacilds vidis litro abertis. Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.</p>
+
+        <script>
+            (function(){
+                document.getElementsByTagName("p")[0].textContent = "Text altered with 'getElementsByTagName'";
+    
+                document.getElementById("p1").textContent = "Text altered with 'getElementById'";
+    
+                document.getElementsByClassName("pAll")[2].textContent = "Text altered with 'getElementsByClassName'";
+    
+                document.querySelector("#p3").textContent = "Text altered with 'document.querySelector'";
+    
+                document.querySelectorAll(".pAll")[4].textContent = "Text altered with 'document.querySelectorAll'";
+            });
+        </script>
+    </body>
+</html>
