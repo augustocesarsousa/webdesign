@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>DOM Exercise</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="DOM exercise Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">   
+
+        <script src="acs.js"></script>
+
+        <style>
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            table{
+                border-collapse: collapse;
+                width: 500px;
+                text-align: center;
+            }
+
+            th{
+                border: 1px solid black;
+                padding: 10px;
+            }
+
+            td{
+                border: 1px solid black;
+                padding: 10px;
+            }
+        </style>     
+    </head>
+    <body>
+        <h1>Average of students</h1>
+
+        <div class="container">
+            <table class="table js-table">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Grade 1</td>
+                        <td>Grade 2</td>
+                        <td>Grade 3</td>
+                        <td>Grade 4</td>
+                        <td>Average</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="student">
+                        <td class="student-name">Zebrunildo</td>
+                        <td class="student-g1">7</td>
+                        <td class="student-g2">7.5</td>
+                        <td class="student-g3">9</td>
+                        <td class="student-g4">8.2</td>
+                        <td class="student-av"></td>
+                    </tr>
+                    <tr class="student">
+                        <td class="student-name">Cremilda</td>
+                        <td class="student-g1">10</td>
+                        <td class="student-g2">9</td>
+                        <td class="student-g3">9.5</td>
+                        <td class="student-g4">8</td>
+                        <td class="student-av"></td>
+                    </tr>
+                    <tr class="student">
+                        <td class="student-name">Josiscléia</td>
+                        <td class="student-g1">6</td>
+                        <td class="student-g2">7</td>
+                        <td class="student-g3">7.3</td>
+                        <td class="student-g4">8</td>
+                        <td class="student-av"></td>
+                    </tr>
+                    <tr class="student">
+                        <td class="student-name">Astruncio</td>
+                        <td class="student-g1">3</td>
+                        <td class="student-g2">8</td>
+                        <td class="student-g3">7.5</td>
+                        <td class="student-g4">9.6</td>
+                        <td class="student-av"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+            (function(){
+                var trs = document.querySelectorAll(".js-table tbody .student");
+    
+                var x = 0;
+                while(trs[x]){
+                    var lineStudent = trs[x];
+                    var tds = lineStudent.querySelectorAll("td");
+                    var grades = returnGrades(tds);
+                    var average = calculateAverage.apply(this, grades);
+    
+                    lineStudent.querySelector(".student-av").textContent = average;
+                    x++;
+                }
+    
+                function returnGrades(tds){
+                    var x = 0;
+                    var arr = [];
+                    while(tds[x]){
+                        if(!isNaN(tds[x].textContent) && tds[x].textContent !== ""){
+                            arr.push(parseFloat(tds[x].textContent));
+                        }
+                        x++;
+                    }
+                    return arr;
+                }
+            })()
+            
+        </script>
+    </body>
+</html>
