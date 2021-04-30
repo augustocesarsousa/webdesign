@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>DOM</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing DOM level 2 Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">        
+    </head>
+    <body>
+        <h1>DOM level 2</h1>
+
+        <button id="btn1" onclick="click1()">Button 1</button>
+        <button id="btn2">Button 2</button>
+
+        <p id="display"></p>
+
+        <script>
+            function click1(){
+                document.getElementById("display").textContent = "Click with DOM level 0!";
+            }
+
+            btn2.addEventListener("click", function(){
+                document.getElementById("display").textContent = "Click with DOM level 2!";
+            });
+        </script>
+    </body>
+</html>
