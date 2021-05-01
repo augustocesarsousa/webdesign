@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>DOM Login</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise DOM login Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        
+        <style>
+            body{
+                font-family: sans-serif;
+                background-color:hsl(100deg, 20%, 80%);
+            }
+
+            #formLogin{
+                width: 200px;
+                margin: 50px auto 0;
+                background-color: hsl(100deg, 50%, 80%);
+            }
+
+            #field{
+                border: 2px solid black;
+                box-shadow: 0px 0px 5px black;
+
+            }
+
+            #field, #txtUser, #txtPass, #btnEnter{
+                border-radius: 10px;
+            }
+
+            #txtLogin{
+                text-align: center;
+                margin: 10px 0 0 0;
+                padding: 0;
+            }
+
+            #txtLogin, #lbUser, #txtUser, #lbPass, #txtPass, #btnEnter{
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            #txtUser, #txtPass, #btnEnter{
+                padding: 5px;
+            }
+
+            #lbUser, #lbPass, #btnEnter{
+                margin-top: 15px;
+            }
+
+            #btnEnter{
+                margin-bottom: 20px;
+            }
+
+            #txtMsg{
+                color: red;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="#" id="formLogin">
+            <fieldset id="field">
+                <p id="txtLogin">Login</p>
+                <label for="txtUser" id="lbUser">User:</label>
+                <input type="text" id="txtUser" name="user">
+    
+                <label for="txtPass" id="lbPass">Password:</label>
+                <input type="password" id="txtPass" name="pass">
+    
+                <button id="btnEnter">Enter</button>
+            </fieldset>
+        </form>
+        
+        <p id="txtMsg"></p>
+
+        <script>
+            (function(){
+                "user strict";
+                
+                var $txtUser = document.getElementById("txtUser");
+                var $txtPass = document.getElementById("txtPass");
+                var $btnEnter = document.getElementById("btnEnter");
+
+                $btnEnter.addEventListener("click", function(){
+                    if(!$txtUser.value){
+                        document.getElementById("txtMsg").textContent = "User cannot be empty!";
+                        return;
+                    }
+                    if(!$txtPass.value){
+                        document.getElementById("txtMsg").textContent = "Password cannot be empty!";
+                        return;
+                    }
+                })
+            })();
+        </script>
+    </body>
+</html>
