@@ -10,13 +10,13 @@
         <style>
             body{
                 font-family: sans-serif;
-                background-color:hsl(100deg, 20%, 80%);
+                background-color:hsl(250deg, 20%, 80%);
             }
 
             #formLogin{
                 width: 200px;
                 margin: 50px auto 0;
-                background-color: hsl(100deg, 50%, 80%);
+                background-color: hsl(250deg, 50%, 80%);
             }
 
             #field{
@@ -60,7 +60,7 @@
         </style>
     </head>
     <body>
-        <form action="#" id="formLogin">
+        <form action="#" method="POST" id="formLogin">
             <fieldset id="field">
                 <p id="txtLogin">Login</p>
                 <label for="txtUser" id="lbUser">User:</label>
@@ -68,8 +68,8 @@
     
                 <label for="txtPass" id="lbPass">Password:</label>
                 <input type="password" id="txtPass" name="pass">
-    
-                <button id="btnEnter">Enter</button>
+                
+                <input type="submit" id="btnEnter" value="Enter">
             </fieldset>
         </form>
         
@@ -79,11 +79,12 @@
             (function(){
                 "user strict";
                 
+                var $form = document.getElementById("formLogin");
                 var $txtUser = document.getElementById("txtUser");
                 var $txtPass = document.getElementById("txtPass");
                 var $btnEnter = document.getElementById("btnEnter");
 
-                $btnEnter.addEventListener("click", function(e){
+                $form.addEventListener("submit", function(e){
                     if(!$txtUser.value){
                         document.getElementById("txtMsg").textContent = "User cannot be empty!";
                         e.preventDefault();
