@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Letter Counter</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise letter counter">
+        <meta name="keywords" content="HTML, CSS3, Javascript">        
+    </head>
+    <body>
+        <h1>Letter Counter</h1>
+
+        <textarea name="txtArea" id="txtArea" cols="50" rows="10" maxlength="100"></textarea>
+        <p><span id="remLetter"></span></p>
+
+        <script>
+            var $txtArea = document.getElementById("txtArea");
+            var $remLetter = document.getElementById("remLetter")
+            
+            $txtArea.addEventListener("input", countAmountLetter);
+            
+            showAmountLetter($txtArea.maxLength, $txtArea);
+
+            function countAmountLetter(e){
+                showAmountLetter((parseInt(this.maxLength) - parseInt(this.value.length)), this);
+            }
+
+            function showAmountLetter(numLetter, e){
+                $remLetter.textContent = numLetter + "/" + $txtArea.maxLength;
+            }
+        </script>
+    </body>
+</html>
