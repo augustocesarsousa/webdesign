@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Task list</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise task list">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        
+        <style>
+            .done{
+                text-decoration: line-through;
+                color: #ccc;
+            }
+        </style>        
+    </head>
+    <body>
+        <h1>Task List</h1>
+
+        <input type="text" id="txtTask">
+        <button id="addTask">Add task</button>
+        
+        <ul id="taskList">
+            <li>Study HTML</li>
+            <li>Wash the dishes</li>
+            <li>Clean the bathroom</li>
+        </ul>
+
+        <script>
+            (function(){
+                "use strict";
+                
+                var $txtTask = document.getElementById("txtTask");
+                var $addTask = document.getElementById("addTask");
+                var $taskList = document.getElementById("taskList");
+                var $taskListItem = $taskList.querySelectorAll("li");
+
+                $addTask.addEventListener("click", addTaskOnList);
+                $txtTask.addEventListener("keyup", checkKey);
+                for(var i = 0; i < $taskListItem.length; i++){
+                    $taskListItem[i].addEventListener("click", taskDone);
+                };
+
+                function checkKey(e){
+                    if(e.keyCode === 13){
+                        addTaskOnList();
+                    }
+                }
+
+                function addTaskOnList(){                   
+                    // $taskList.innerHTML += "<li>" + $txtTask.value + "</li>";
+                    var li = document.createElement("li");
+                    var text = document.createTextNode($txtTask.value);
+
+                    li.appendChild(text);
+                    $taskList.appendChild(li);
+                    
+                    cleanTxtTask();                    
+                };
+
+                function taskDone(){
+                    this.classList.toggle("done");
+                }
+
+                function cleanTxtTask(){
+                    $txtTask.value = "";
+                    $txtTask.focus();
+                }
+            })();
+        </script>
+    </body>
+</html>
