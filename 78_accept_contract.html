@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Accept Contract</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise accept contract">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        
+        <style>
+            #txtArea, label, #btn{
+                display: block;
+            }
+
+            #chk{
+                margin: 20px 0;
+            }
+        </style>        
+    </head>
+    <body>
+        <h1>Accept Contract</h1>
+
+        <form action="#" method="POST">
+            <textarea name="txtArea" id="txtArea" cols="50" rows="10" maxlength="100" readonly>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! A ordem dos tratores não altera o pão duris. Atirei o pau no gatis, per gatis num morreus. Suco de cevadiss deixa as pessoas mais interessantis.Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! A ordem dos tratores não altera o pão duris. Atirei o pau no gatis, per gatis num morreus. Suco de cevadiss deixa as pessoas mais interessantis.Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! A ordem dos tratores não altera o pão duris. Atirei o pau no gatis, per gatis num morreus. Suco de cevadiss deixa as pessoas mais interessantis.Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! A ordem dos tratores não altera o pão duris. Atirei o pau no gatis, per gatis num morreus. Suco de cevadiss deixa as pessoas mais interessantis.</textarea>
+
+            <label><input type="checkbox" id="chk" checked> Accept contract</label>
+
+            <input type="submit" id="btn" value="Send" disabled>
+        </form>
+        <script>
+            (function(){
+                "use strict";
+                var $chk = document.getElementById("chk");
+                var $btn = document.getElementById("btn");
+
+                enableButton();
+
+                $chk.addEventListener("change", enableButton);
+
+                function enableButton(){
+                    // if($chk.checked){
+                    //     $btn.disabled = false;
+                    // }else{
+                    //     $btn.disabled = true;
+                    // }
+                    $btn.disabled = !$chk.checked;
+                };
+            })();
+        </script>
+    </body>
+</html>
