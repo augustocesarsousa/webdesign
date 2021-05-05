@@ -37,9 +37,13 @@
 
                 $addTask.addEventListener("click", addTaskOnList);
                 $txtTask.addEventListener("keyup", checkKey);
-                for(var i = 0; i < $taskListItem.length; i++){
-                    $taskListItem[i].addEventListener("click", taskDone);
-                };
+                $taskList.addEventListener("click", addEvent)
+                
+                function addEvent(e){
+                    if(e.target.nodeName === "LI"){
+                        removeTask(e.target);
+                    }
+                }
 
                 function checkKey(e){
                     if(e.keyCode === 13){
@@ -47,19 +51,19 @@
                     }
                 }
 
-                function addTaskOnList(){                   
-                    // $taskList.innerHTML += "<li>" + $txtTask.value + "</li>";
+                function addTaskOnList(){
                     var li = document.createElement("li");
                     var text = document.createTextNode($txtTask.value);
 
                     li.appendChild(text);
                     $taskList.appendChild(li);
-                    
                     cleanTxtTask();                    
-                };
+                }
 
-                function taskDone(){
-                    this.classList.toggle("done");
+                function removeTask(li){
+                    if(confirm("Would you like to remove the task ("+li.textContent+")?")){
+                        li.parentNode.removeChild(li);
+                    }
                 }
 
                 function cleanTxtTask(){
