@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing Math with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Math</title>
+        <script>
+            (function(){
+                window.addEventListener("load", function(){                
+                    var $div1 = document.getElementById("div1");
+
+                    var $pRound = document.createElement("p");
+                    var $txtRound = document.createTextNode("Math.round(5.49) = "+Math.round(5.49));
+                    $pRound.appendChild($txtRound);
+                    $div1.appendChild($pRound);
+
+                    var $pRound2 = document.createElement("p");
+                    var $txtRound2 = document.createTextNode("Math.round(5.50) = "+Math.round(5.50));
+                    $pRound2.appendChild($txtRound2);
+                    $div1.appendChild($pRound2);
+                    
+                    var $pFloor = document.createElement("p");
+                    var $txtFloor = document.createTextNode("Math.floor(5.99) = "+Math.floor(5.99));
+                    $pFloor.appendChild($txtFloor);
+                    $div1.appendChild($pFloor);   
+                    
+                    var $pCeil = document.createElement("p");
+                    var $txtCeil = document.createTextNode("Math.ceil(5.01) = "+Math.ceil(5.01));
+                    $pCeil.appendChild($txtCeil);
+                    $div1.appendChild($pCeil);   
+
+                    var $pPow = document.createElement("p");
+                    var $txtPow = document.createTextNode("Math.pow(5, 3) = "+Math.pow(5, 3));
+                    $pPow.appendChild($txtPow);
+                    $div1.appendChild($pPow);
+                    
+                    var $pSqrt = document.createElement("p");
+                    var $txtSqrt = document.createTextNode("Math.sqrt(49) = "+Math.sqrt(49));
+                    $pSqrt.appendChild($txtSqrt);
+                    $div1.appendChild($pSqrt);
+                    
+                    var $pCbrt = document.createElement("p");
+                    var $txtCbrt = document.createTextNode("Math.cbrt(27) = "+Math.cbrt(27));
+                    $pCbrt.appendChild($txtCbrt);
+                    $div1.appendChild($pCbrt);
+                    
+                    var $pSQRT2 = document.createElement("p");
+                    var $txtSQRT2 = document.createTextNode("Math.SQRT2 = "+Math.SQRT2);
+                    $pSQRT2.appendChild($txtSQRT2);
+                    $div1.appendChild($pSQRT2);
+
+                    var $pPI = document.createElement("p");
+                    var $txtPI = document.createTextNode("Math.PI = "+Math.PI);
+                    $pPI.appendChild($txtPI);
+                    $div1.appendChild($pPI);
+
+                    var $pRandom = document.createElement("p");
+                    var $txtRandom = document.createTextNode("Math.random() = "+Math.random());
+                    $pRandom.appendChild($txtRandom);
+                    $div1.appendChild($pRandom);
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Math</h1>
+        </div>
+    </body>
+</html>

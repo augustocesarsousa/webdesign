@@ -11,3 +11,12 @@ function calculateAverage(){
 
     return (total / amount).toFixed(2);
 }
+
+function raffleNumber(n){
+    var number = n || 1;
+    var raffle = Math.random();
+
+    raffle = raffle * number;
+    raffle = Math.floor(raffle);
+    return raffle;
+}
