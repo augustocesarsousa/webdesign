@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing String with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>String</title>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>String</h1>
+            <p id="txtExample">Testing String with Javascript</p>
+        </div>
+
+        <script>
+            (function(){
+                var $div1 = document.getElementById("div1");
+                var $txtExample = document.getElementById("txtExample");
+
+                var $pLength = document.createElement("p");
+                var $txtLength = document.createTextNode("("+$txtExample.textContent+").length = "+$txtExample.textContent.length);
+                $pLength.appendChild($txtLength);
+                $div1.appendChild($pLength);
+
+                var $pReplace = document.createElement("p");
+                var $txtReplace = document.createTextNode("("+$txtExample.textContent+").replace('i', 'I') = "+$txtExample.textContent.replace("i", "I"));
+                $pReplace.appendChild($txtReplace);
+                $div1.appendChild($pReplace);
+
+                var $pReplace2 = document.createElement("p");
+                var $txtReplace2 = document.createTextNode("("+$txtExample.textContent+").replace(/i/g, 'I') = "+$txtExample.textContent.replace(/i/g, "I"));
+                $pReplace2.appendChild($txtReplace2);
+                $div1.appendChild($pReplace2);
+
+                var $pIndexOf = document.createElement("p");
+                var $txtIndexOf = document.createTextNode("("+$txtExample.textContent+").indexOf('g') = "+$txtExample.textContent.indexOf('g'));
+                $pIndexOf.appendChild($txtIndexOf);
+                $div1.appendChild($pIndexOf);
+
+                var $pLastIndexOf = document.createElement("p");
+                var $txtLastIndexOf = document.createTextNode("("+$txtExample.textContent+").lastIndexOf('g') = "+$txtExample.textContent.lastIndexOf('g'));
+                $pLastIndexOf.appendChild($txtLastIndexOf);
+                $div1.appendChild($pLastIndexOf);
+
+                var $pSlice = document.createElement("p");
+                var $txtSlice = document.createTextNode("("+$txtExample.textContent+").slice(10) = "+$txtExample.textContent.slice(10));
+                $pSlice.appendChild($txtSlice);
+                $div1.appendChild($pSlice);
+
+                var $pSubstring = document.createElement("p");
+                var $txtSubstring = document.createTextNode("("+$txtExample.textContent+").substring(12, 20) = "+$txtExample.textContent.substring(12, 20));
+                $pSubstring.appendChild($txtSubstring);
+                $div1.appendChild($pSubstring);
+
+                var $pSplit = document.createElement("p");
+                var $txtSplit = document.createTextNode("("+$txtExample.textContent+").split(' ') = ["+$txtExample.textContent.split(' ')+"]");
+                $pSplit.appendChild($txtSplit);
+                $div1.appendChild($pSplit);
+
+                var $pToUpperCase = document.createElement("p");
+                var $txtToUpperCase = document.createTextNode("("+$txtExample.textContent+").toUpperCase() = "+$txtExample.textContent.toUpperCase());
+                $pToUpperCase.appendChild($txtToUpperCase);
+                $div1.appendChild($pToUpperCase);
+
+                var $pToLowerCase = document.createElement("p");
+                var $txtToLowerCase = document.createTextNode("("+$txtExample.textContent+").toLowerCase() = "+$txtExample.textContent.toLowerCase());
+                $pToLowerCase.appendChild($txtToLowerCase);
+                $div1.appendChild($pToLowerCase);
+            })();
+        </script>
+    </body>
+</html>
