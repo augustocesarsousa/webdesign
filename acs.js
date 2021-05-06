@@ -9,5 +9,5 @@ function calculateAverage(){
         x++;
     }
 
-    return total / amount;
+    return (total / amount).toFixed(2);
 }

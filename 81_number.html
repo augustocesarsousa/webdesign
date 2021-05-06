@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing Number with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Number</title>
+        <script>
+            (function(){
+                window.addEventListener("load", function(){                
+                    var $div1 = document.getElementById("div1");
+
+                    var $pToFixed = document.createElement("p");
+                    var $txtToFixed = document.createTextNode("(123.12345).toFixed(2) = "+(123.12345).toFixed(2));
+                    $pToFixed.appendChild($txtToFixed);
+                    $div1.appendChild($pToFixed);
+
+                    var $pToFixed2 = document.createElement("p");
+                    var $txtToFixed2 = document.createTextNode("(123.12345).toFixed(10) = "+(123.12345).toFixed(10));
+                    $pToFixed2.appendChild($txtToFixed2);
+                    $div1.appendChild($pToFixed2);
+
+                    var $pToPrecision = document.createElement("p");
+                    var $txtToPrecision = document.createTextNode("(123.12345).toPrecision(2) = "+(123.12345).toPrecision(2));
+                    $pToPrecision.appendChild($txtToPrecision);
+                    $div1.appendChild($pToPrecision);
+
+                    var $pToString = document.createElement("p");
+                    var $txtToString = document.createTextNode("(123.12345).toString(2) = "+(123.12345).toString(2));
+                    $pToString.appendChild($txtToString);
+                    $div1.appendChild($pToString);
+
+                    var $pToString2 = document.createElement("p");
+                    var $txtToString2 = document.createTextNode("(123.12345).toString(16) = "+(123.12345).toString(16));
+                    $pToString2.appendChild($txtToString2);
+                    $div1.appendChild($pToString2);
+
+                    var $pToExponential = document.createElement("p");
+                    var $txtToExponential = document.createTextNode("(123.12345).toExponential(2) = "+(123.12345).toExponential(2));
+                    $pToExponential.appendChild($txtToExponential);
+                    $div1.appendChild($pToExponential);
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Number</h1>
+        </div>
+    </body>
+</html>
