@@ -65,7 +65,7 @@
                     </tr>
                     <tr class="student">
                         <td class="student-name">Josiscléia</td>
-                        <td class="student-g1">6</td>
+                        <td class="student-g1">0</td>
                         <td class="student-g2">7</td>
                         <td class="student-g3">7.3</td>
                         <td class="student-g4">8</td>
@@ -91,9 +91,12 @@
                     var lineStudent = trs[x];
                     var tds = lineStudent.querySelectorAll("td");
                     var grades = returnGrades(tds);
-                    var average = calculateAverage.apply(this, grades);
-    
-                    lineStudent.querySelector(".student-av").textContent = average;
+                    var haveZero = grades.some(function(n){
+                        return n === 0;
+                    });
+                    var msg = haveZero?"disapproved":calculateAverage.apply(this, grades);
+                    
+                    lineStudent.querySelector(".student-av").textContent = msg;
                     x++;
                 }
     
