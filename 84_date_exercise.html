@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing Date with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Date</title>
+
+        <script src="acs.js"></script>
+        <script>
+            (function(){
+                window.addEventListener("load", function(){
+                    var $div1 = document.getElementById("div1");
+                    var date = new Date();
+                    var $txtNode;
+                    
+                    var $p = document.createElement("p");
+                    $txtNode = document.createTextNode("Today is "+returnDate(date));
+                    $p.appendChild($txtNode);
+                    $div1.appendChild($p);
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Date Exercise</h1>
+        </div>
+    </body>
+</html>

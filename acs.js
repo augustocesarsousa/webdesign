@@ -20,3 +20,10 @@ function raffleNumber(n){
     raffle = Math.floor(raffle);
     return raffle;
 }
+
+function returnDate(date){
+    var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+    var month = (date.getMonth()+1) < 10 ? "0" + date.getMonth() : date.getMonth();
+
+    return month + "/" + day + "/" + date.getFullYear();
+}
