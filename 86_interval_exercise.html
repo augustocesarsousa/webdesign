@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise clock Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Clock</title>
+
+        <script>
+            (function(){
+                window.addEventListener("load", function(){
+                    var $pClock = document.getElementById("pClock");                    
+                    
+                    setInterval(showClock, 1000);
+
+                    function showClock(){
+                        $pClock.textContent = clock();
+                    }
+
+                    function clock(){
+                        var date = new Date();
+                        var h = formatClock(date.getHours());
+                        var m = formatClock(date.getMinutes());
+                        var s = formatClock(date.getSeconds());
+
+                        return h + ":" + m + ":" + s;
+                    }
+                    
+                    function formatClock(n){
+                        return n < 10 ? "0" + n : n;
+                    }
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Clock</h1>
+
+            <p id="pClock"></p>
+        </div>
+    </body>
+</html>
