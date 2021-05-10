@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="exercise chronometer Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Chronometer</title>
+
+        <script>
+            (function(){
+                window.addEventListener("load", function(){
+                    var $chronometer = document.getElementById("chronometer");
+                    var $start = document.getElementById("start");
+                    var $pause = document.getElementById("pause");
+                    var $stop = document.getElementById("stop");
+
+                    $start.addEventListener("click", startChronometer);
+                    $pause.addEventListener("click", pauseChronometer);
+                    $stop.addEventListener("click", stopChronometer);
+
+                    function startChronometer(){
+                    }
+
+                    function pauseChronometer(){
+                        
+                    }
+
+                    function stopChronometer(){
+                        
+                    }
+
+                    function showChronometer(){
+                        $chronometer.value = chronometer();
+                    }
+
+                    function chronometer(){
+                    }
+
+                    function format(){
+                    }
+
+                    function sumMilliseconds(){                        
+                        
+                    }
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Chronometer</h1>
+
+            <input type="text" id="chronometer" readonly>
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+        </div>
+    </body>
+</html>
