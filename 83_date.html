@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing Date with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Date</title>
+        <script>
+            (function(){
+                window.addEventListener("load", function(){                
+                    var $div1 = document.getElementById("div1");
+                    var date = new Date();
+                    var $txtNode;
+                    
+                    var $p = document.createElement("p");
+                    $txtNode = document.createTextNode("date = "+date);
+                    console.log($txtNode);
+                    $p.appendChild($txtNode);
+                    $div1.appendChild($p);
+
+                    var $pTime = document.createElement("p");
+                    $txtNode = document.createTextNode("getTime() = "+date.getTime());
+                    console.log($txtNode);
+                    $pTime.appendChild($txtNode);
+                    $div1.appendChild($pTime);
+
+                    var $pDay = document.createElement("p");
+                    $txtNode = document.createTextNode("getDay() = "+date.getDay());
+                    console.log($txtNode);
+                    $pDay.appendChild($txtNode);
+                    $div1.appendChild($pDay);
+
+                    var $pDate = document.createElement("p");
+                    $txtNode = document.createTextNode("getDate() = "+date.getDate());
+                    console.log($txtNode);
+                    $pDate.appendChild($txtNode);
+                    $div1.appendChild($pDate);
+
+                    var $pMonth = document.createElement("p");
+                    $txtNode = document.createTextNode("getMonth() = "+date.getMonth());
+                    console.log($txtNode);
+                    $pMonth.appendChild($txtNode);
+                    $div1.appendChild($pMonth);
+
+                    var $pYear = document.createElement("p");
+                    $txtNode = document.createTextNode("getYear() = "+date.getYear());
+                    console.log($txtNode);
+                    $pYear.appendChild($txtNode);
+                    $div1.appendChild($pYear);
+
+                    var $pFullYear = document.createElement("p");
+                    $txtNode = document.createTextNode("getFullYear() = "+date.getFullYear());
+                    console.log($txtNode);
+                    $pFullYear.appendChild($txtNode);
+                    $div1.appendChild($pFullYear);
+
+                    var $pHours = document.createElement("p");
+                    $txtNode = document.createTextNode("getHours() = "+date.getHours());
+                    console.log($txtNode);
+                    $pHours.appendChild($txtNode);
+                    $div1.appendChild($pHours);
+
+                    var $pMinutes = document.createElement("p");
+                    $txtNode = document.createTextNode("getMinutes() = "+date.getMinutes());
+                    console.log($txtNode);
+                    $pMinutes.appendChild($txtNode);
+                    $div1.appendChild($pMinutes);
+                    
+                    var $pSeconds = document.createElement("p");
+                    $txtNode = document.createTextNode("getSeconds() = "+date.getSeconds());
+                    console.log($txtNode);
+                    $pSeconds.appendChild($txtNode);
+                    $div1.appendChild($pSeconds);
+
+                    var $pMilliseconds = document.createElement("p");
+                    $txtNode = document.createTextNode("getMilliseconds() = "+date.getMilliseconds());
+                    console.log($txtNode);
+                    $pMilliseconds.appendChild($txtNode);
+                    $div1.appendChild($pMilliseconds);
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Date</h1>
+
+        </div>
+    </body>
+</html>
