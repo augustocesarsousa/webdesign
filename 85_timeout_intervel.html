@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Augusto Cesar">
+        <meta name="description" content="testing timeout and intervel with Javascript">
+        <meta name="keywords" content="HTML, CSS3, Javascript">
+        <title>Timeout and interval</title>
+
+        <script>
+            (function(){
+                window.addEventListener("load", function(){
+                    var $timeout = document.getElementById("timeout");
+                    var $interval = document.getElementById("interval");
+                    var n = 1;
+
+                    setTimeout(showTimeout, 1000);
+                    setInterval(showInterval, 1000);
+
+                    function showTimeout(){
+                        $timeout.textContent = "Timeout = " + n;
+                        sum();
+                    }
+
+                    function showInterval(){
+                        $interval.textContent = "Interval = " + sum();
+                    }
+
+                    function sum(){
+                        return n++;
+                    }
+                });
+            })();
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <h1>Timeout and interval</h1>
+
+            <p id="timeout"></p>
+            <p id="interval"></p>
+        </div>
+    </body>
+</html>
