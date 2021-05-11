@@ -15,33 +15,66 @@
                     var $pause = document.getElementById("pause");
                     var $stop = document.getElementById("stop");
 
-                    $start.addEventListener("click", startChronometer);
-                    $pause.addEventListener("click", pauseChronometer);
-                    $stop.addEventListener("click", stopChronometer);
+                    $start.addEventListener("click", start);
+                    $pause.addEventListener("click", pause);
+                    $stop.addEventListener("click", stop);
 
-                    function startChronometer(){
+                    var interval = null;
+                    var msStart = 0;
+                    var msPause = 0;
+                    var msTimeElapsed = 0;
+                    var running = false;
+
+                    function start(){
+                        if(running) return;
+                        msStart = Date.now();
+                        startChronometer();
+                        running = true;
+
                     }
 
-                    function pauseChronometer(){
-                        
+                    function pause(){
+                        if(!$chronometer.value) return;
+                        if(running){
+                            clearInterval(interval);
+                            msPause = Date.now();
+                            msTimeElapsed += (msPause-msStart);
+                        }else{
+                            msStart = Date.now();
+                            startChronometer(msTimeElapsed);
+                        }
                     }
 
-                    function stopChronometer(){
-                        
+                    function stop(){
+                        msStart = 0;
+                        msPause = 0;
+                        msTimeElapsed = 0;
+                        running = false;
+                        clearInterval(interval);
+                        $chronometer.value = "";
                     }
 
-                    function showChronometer(){
-                        $chronometer.value = chronometer();
+                    function startChronometer(timeElapsed){
+                        var _ms = timeElapsed || 0;
+                        interval = setInterval(function(){
+                            var msNow = Date.now();
+                            var difference = msNow - msStart;
+                            $chronometer.value = formatMS(difference + _ms);
+                        }, 100);
                     }
 
-                    function chronometer(){
-                    }
-
-                    function format(){
-                    }
-
-                    function sumMilliseconds(){                        
-                        
+                    function formatMS(ms){
+                        const MINUTE = 60000;
+                        if(ms < 1000){
+                            return ms;
+                        }else if(ms < MINUTE){
+                            var s = parseInt(ms/1000);
+                            var c = parseInt(ms-(s*1000));
+                            return s + ":" + c;
+                        }else{
+                            var m = parseInt(ms/MINUTE);
+                            return m + ":" + formatMS(ms-m*MINUTE);
+                        }
                     }
                 });
             })();
