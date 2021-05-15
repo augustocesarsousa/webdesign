@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.header{
+    background-color: #fff;
+    width: 100%;
+}
+
+.header-txtLogo{
+    text-transform: uppercase;
+    background-color: #63c6ae;
+    font-size: 24px;
+    margin: 0;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    float: left;
+}
+
+.header-btnMenu{
+
+}
+
+.header-nav{
+    clear: left;
+}
+
+.header-nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li{
+    list-style-type: none;
+    background-color: #242c2c;
+    text-align: center;
+    border-bottom: 1px dotted rgba(255,255,255,.2);
+}
+
+.header-nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #686165;
+    font-size: 14px;
+    font-weight: 400;
+    transition: .4s ease;
+    display: block;    
+    padding: 25px 0;
+}
+
+.header-nav a:hover{
+    color: #63c6ae;
+}
