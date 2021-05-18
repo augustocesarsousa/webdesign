@@ -1,10 +1,18 @@
 body{
     margin: 0;
     font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
 }
 
 img{
     max-width: 100%;
+}
+
+.container-margin{
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 .header{
@@ -106,4 +114,53 @@ img{
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.people-cards{
+    margin-top: 2.5em;
+}
+
+.people-cards-card{
+
+}
+
+.people-cards-card:hover{
+    outline: 5px solid #63c6ae;
+    outline-offset: -5px;
+}
+
+.people-cards-card:hover .people-cards-avatar img{
+    transform: translateY(-50%);
+}
+
+.people-cards-card:hover .people-cards-title, .people-cards-card:hover .people-cards-text{
+    color: #63c6ae;
+}
+
+.people-cards-img{
+    width: 100%;
+}
+
+.people-cards-avatar{
+    margin: -55px auto;
+    height: 88px;
+    width: 88px;
+    overflow: hidden;
+}
+
+.people-cards-content{
+    text-align: center;
+    padding: 40px 25px 10px;
+    border-left: 1px solid #dbe1e7;
+}
+
+.people-cards-title{
+    color: #737c85;
+    font-size: 21px;
+    font-weight: normal;
+}
+
+.people-cards-text{
+    color: #929da5;
+    font-size: 14px;
 }
