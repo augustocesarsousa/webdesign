@@ -248,3 +248,26 @@ img{
 .slideShow figure{
     display: inline-block;
 }
+
+.quote-content{
+    background-color: #63c6ae;
+    padding: 50px 0;
+    border-bottom: 12px solid #58b9a1;
+}
+
+.quote-slideShow h2{
+    color: #fff;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.quote-slideShow figcaption{
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.no-js .quote-slideShow figure + figure{
+    margin-top: 5em;
+}
