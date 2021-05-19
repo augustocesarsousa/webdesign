@@ -13,6 +13,7 @@ img{
     margin-left: auto;
     padding-right: 1em;
     padding-left: 1em;
+    max-width: 1000px;
 }
 
 .header{
@@ -22,6 +23,7 @@ img{
 
 .header-txtLogo{
     text-transform: uppercase;
+    text-align: right;
     background-color: #63c6ae;
     font-size: 24px;
     margin: 0;
@@ -279,6 +281,10 @@ img{
     font-size: 14px;
 }
 
+.footer-title{
+    text-transform: uppercase;
+}
+
 .footer-links li{
     list-style: none;
 }
@@ -288,4 +294,70 @@ img{
     display: block;
     font-weight: 600;
     text-decoration: none;
+    transition: .4s ease;
+}
+
+.footer-links a:hover{
+    color: #63c6ae;
+}
+
+@media screen and (min-width: 1024px){
+    .header{
+        position: fixed;
+    }
+
+    .header-txtLogo{
+        width: 25%;
+        box-sizing: border-box;
+    }
+
+    .header-btnMenu{
+        display: none;
+    }
+
+    .header-nav{
+        float: left;
+        width: 75%;
+        clear: none;
+        max-width: 800px;
+    }
+
+    .header-nav ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .header-nav li{
+        border-bottom: none;
+        flex-grow: 1;
+    }
+
+    .header-nav a{
+        background-color: #fff;
+    }
+
+    .people-cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+    }
+
+    .content .container-margin{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+
+    .lastArticles-thumbs{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .footer .container-margin{
+        display: grid;
+        grid-template-columns: 200px 400px 300px 200px ;
+    }
+
+    .footer .container-margin > *{
+        margin: 2em;
+    }
 }
