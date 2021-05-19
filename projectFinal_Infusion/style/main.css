@@ -233,3 +233,18 @@ img{
     display: block;
     width: 100%;
 }
+
+.laptopSlider{
+    background-color: #242a2c;
+    padding: 125px 0 100px;
+    width: 100%;
+    overflow: auto;
+}
+
+.slideShow{
+    white-space: nowrap;
+}
+
+.slideShow figure{
+    display: inline-block;
+}
