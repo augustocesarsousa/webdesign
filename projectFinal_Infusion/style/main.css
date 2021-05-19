@@ -271,3 +271,21 @@ img{
 .no-js .quote-slideShow figure + figure{
     margin-top: 5em;
 }
+
+.footer{
+    background-color: #242a2c;
+    padding: 50px 0 250px;
+    color: #454e51;
+    font-size: 14px;
+}
+
+.footer-links li{
+    list-style: none;
+}
+
+.footer-links a{
+    color: #454e51;
+    display: block;
+    font-weight: 600;
+    text-decoration: none;
+}
