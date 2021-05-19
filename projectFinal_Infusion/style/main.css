@@ -21,6 +21,11 @@ img{
     width: 100%;
 }
 
+.js .header{
+    position: fixed;
+    width: 100%;
+}
+
 .header-txtLogo{
     text-transform: uppercase;
     text-align: right;
@@ -36,7 +41,14 @@ img{
 }
 
 .header-btnMenu{
+    float: right;
+    margin: 1.5em;
+    background-color: transparent;
+    border: none;
+}
 
+.js .header-nav{
+    transition: max-height 1s;
 }
 
 .header-nav{
