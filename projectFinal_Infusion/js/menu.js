@@ -9,12 +9,25 @@ function Menu(config){
     var _this = this;
 
     this.btn.removeAttribute("style");
-    closeMenu();
+
+    if(this.maxWidth){
+        window.addEventListener("resize", e => {
+            if(window.innerWidth > _this.maxWidth){
+                _this.nav.removeAttribute("style");
+            } else if(!this.nav.getAttribute("styke")){
+                closeMenu();
+            }
+        })
+
+        if(window.innerWidth <= _this.maxWidth){
+            closeMenu();
+        }
+    }
 
     this.btn.addEventListener("click", openOrClose);
 
     function openOrClose(){
-        if(_opened){
+        if(!_opened){
             openMenu();
         } else {
             closeMenu();
