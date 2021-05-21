@@ -97,6 +97,63 @@ img{
     cursor: pointer;
 }
 
+.js .quote-content .quote-slideShow{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+}
+
+.js .quote-slideShow figure{
+    display: inline-block;
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    margin-left: 0;
+}
+
+.js .quote-slideShow figure.show{
+    opacity: 1;
+    margin-left: 0;
+    position: static;
+}
+
+.js .quote-slideShow h2{
+    margin: 20px 100px;
+    /* text-align: center; */
+}
+
+.js .quote-content .prev, .js .quote-content .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.3em;
+    transition: .5s color;
+}
+
+.js .quote-content .prev:hover, .js .quote-content .next:hover{
+    color: rgba(100,100,100,.2);
+}
+
+.js .quote-content .prev{
+    left: 10px;
+    cursor: pointer;
+}
+
+.js .quote-content .next{
+    right: 10px;
+    cursor: pointer;
+}
+
 .header-nav{
     clear: left;
 }
