@@ -117,13 +117,12 @@ img{
 
 .js .quote-slideShow figure.show{
     opacity: 1;
-    margin-left: 0;
+    margin: 0;
     position: static;
 }
 
 .js .quote-slideShow h2{
     margin: 20px 100px;
-    /* text-align: center; */
 }
 
 .js .quote-content .prev, .js .quote-content .next{
