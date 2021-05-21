@@ -9,7 +9,7 @@
         widthEnable: 1024
     });
 
-    var caruosel = new Carousel({
+    var carousel = new Carousel({
         container: ".laptopSlider .slideShow",
         item: "figure",
         btnPrev: ".prev",

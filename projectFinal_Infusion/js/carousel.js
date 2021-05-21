@@ -1,14 +1,14 @@
 function Carousel(config){
-    this.container = ( typeof config.container === "string") ? 
+    this.container = (typeof config.container === "string") ? 
     document.querySelector(config.container) : config.container;
 
-    this.itens = ( typeof config.itens === "string") ? 
-    this.container.querySelectorAll(config.itens) : config.itens;
+    this.item = (typeof config.item === "string") ? 
+    this.container.querySelectorAll(config.item) : config.item;
 
-    this.btnPrev = ( typeof config.btnPrev === "string") ? 
+    this.btnPrev = (typeof config.btnPrev === "string") ? 
     this.container.querySelector(config.btnPrev) : config.btnPrev;
 
-    this.btnNext = ( typeof config.btnNext === "string") ? 
+    this.btnNext = (typeof config.btnNext === "string") ? 
     this.container.querySelector(config.btnNext) : config.btnNext;
 
     var _this = this;
@@ -17,13 +17,13 @@ function Carousel(config){
     init();
 
     function init(){
-        var _show = this.container.querySelectorAll(".show");
+        var _show = _this.container.querySelectorAll(".show");
 
         Array.prototype.forEach.call(_show, function(sh){
             sh.classList.remove("show");
         })
 
-        _this.itens[0].classList.add("show");
+        _this.item[0].classList.add("show");
         _this.btnPrev.removeAttribute("style");
         _this.btnNext.removeAttribute("style");
 
@@ -36,21 +36,21 @@ function Carousel(config){
     }
 
     function showPrevSlide(){
-        _currentSlide++;
+        _currentSlide--;
         showSlide();
     }
 
-    function showPrevSlide(){
+    function showNextSlide(){
         _currentSlide--;
         showSlide();
     }
 
     function showSlide(){
-        var qtd = _this.itens.length;
+        var qtd = _this.item.length;
         var slide = _currentSlide % qtd;
         slide = Math.abs(slide);
 
-        _this.container.querySelectorAll(".show").classList.remove("show");
-        _this.itens[slide].classList.add("show");
+        _this.container.querySelector(".show").classList.remove("show");
+        _this.item[slide].classList.add("show");
     }
 }

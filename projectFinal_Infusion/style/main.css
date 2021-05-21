@@ -24,6 +24,7 @@ img{
 .js .header{
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 .header-txtLogo{
@@ -50,6 +51,50 @@ img{
 
 .js .header-nav{
     transition: max-height .8s ease;
+}
+
+.js .laptopSlider{
+    overflow: hidden;
+    color: #fff;
+}
+
+.js .laptopSlider .slideShow{
+    position: relative;
+    width: 100%;
+    margin: auto;
+    max-width: 800px;
+}
+
+.js .laptopSlider figure{
+    opacity: 0;
+    transition: 1s opacity;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    margin-left: 0;
+}
+
+.js .laptopSlider figure.show{
+    opacity: 1;
+    margin-left: 0;
+    position: static;
+}
+
+.js .laptopSlider .prev, .js .laptopSlider .next{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+}
+
+.js .laptopSlider .prev{
+    left: 10px;
+    cursor: pointer;
+}
+
+.js .laptopSlider .next{
+    right: 10px;
+    cursor: pointer;
 }
 
 .header-nav{
@@ -133,10 +178,6 @@ img{
 
 .people-cards{
     margin-top: 2.5em;
-}
-
-.people-cards-card{
-
 }
 
 .people-cards-card:hover{
